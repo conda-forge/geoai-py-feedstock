@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -29,6 +29,23 @@ test:
     - pip check
   requires:
     - pip
+
+outputs:
+  - name: geoai-py
+  - name: geoai
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage("geoai-py", exact=True) }}
+
+    test:
+      imports:
+        - geoai
+
 
 about:
   home: https://github.com/opengeos/geoai
