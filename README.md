@@ -27,6 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-geoai-green.svg)](https://anaconda.org/conda-forge/geoai) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/geoai.svg)](https://anaconda.org/conda-forge/geoai) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/geoai.svg)](https://anaconda.org/conda-forge/geoai) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/geoai.svg)](https://anaconda.org/conda-forge/geoai) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-geoai--py-green.svg)](https://anaconda.org/conda-forge/geoai-py) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/geoai-py.svg)](https://anaconda.org/conda-forge/geoai-py) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/geoai-py.svg)](https://anaconda.org/conda-forge/geoai-py) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/geoai-py.svg)](https://anaconda.org/conda-forge/geoai-py) |
 
 Installing geoai-py
@@ -39,41 +40,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `geoai-py` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `geoai, geoai-py` can be installed with `conda`:
 
 ```
-conda install geoai-py
-```
-
-or with `mamba`:
-
-```
-mamba install geoai-py
-```
-
-It is possible to list all of the versions of `geoai-py` available on your platform with `conda`:
-
-```
-conda search geoai-py --channel conda-forge
+conda install geoai geoai-py
 ```
 
 or with `mamba`:
 
 ```
-mamba search geoai-py --channel conda-forge
+mamba install geoai geoai-py
+```
+
+It is possible to list all of the versions of `geoai` available on your platform with `conda`:
+
+```
+conda search geoai --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search geoai --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search geoai-py --channel conda-forge
+mamba repoquery search geoai --channel conda-forge
 
-# List packages depending on `geoai-py`:
-mamba repoquery whoneeds geoai-py --channel conda-forge
+# List packages depending on `geoai`:
+mamba repoquery whoneeds geoai --channel conda-forge
 
-# List dependencies of `geoai-py`:
-mamba repoquery depends geoai-py --channel conda-forge
+# List dependencies of `geoai`:
+mamba repoquery depends geoai --channel conda-forge
 ```
 
 
@@ -95,7 +96,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
