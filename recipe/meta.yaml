@@ -22,6 +22,8 @@ requirements:
   run:
     - python >={{ python_min }}
     - segment-geospatial
+    - albumentations
+    - transformers
 
 test:
   imports:
