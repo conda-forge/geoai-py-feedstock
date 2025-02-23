@@ -27,7 +27,7 @@ requirements:
     - localtileserver
     - scikit-learn
     - segment-geospatial
-    - torch
+    - pytorch
     - torchgeo
     - transformers
 
