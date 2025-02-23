@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: d245a927afbb6b2aefb55ecff9775562aa1f1fb47b062d423d2c853febb26b48
+  sha256: 2c53a50cf02ef80a5c630b62dcfe43e4165ab3f8eeba754f7fde759e5755362b
 
 build:
   noarch: python
@@ -21,8 +21,14 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - segment-geospatial
     - albumentations
+    - jupyter-server-proxy
+    - leafmap
+    - localtileserver
+    - scikit-learn
+    - segment-geospatial
+    - pytorch
+    - torchgeo
     - transformers
 
 test:
