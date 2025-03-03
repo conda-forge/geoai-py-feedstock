@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.1.7" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: c0af978b8bd20cbcc915b1aa4aecc289a22575e2883b7170adba194496ef2277
+  sha256: 4dd3b2e5b0a8887679812f0a5c4dc9b2387642d79fe408a70059afb0ecb8cfc7
 
 build:
   noarch: python
@@ -22,13 +22,22 @@ requirements:
   run:
     - python >={{ python_min }}
     - albumentations
+    - geopandas
+    - huggingface_hub
     - jupyter-server-proxy
     - leafmap
     - localtileserver
+    - opencv-python-headless
+    - overturemaps
+    - planetary-computer
+    - pystac-client
+    - rasterio
+    - rioxarray
     - scikit-learn
     - segment-geospatial
     - pytorch
     - torchgeo
+    - tqdm
     - transformers
 
 test:
@@ -61,7 +70,7 @@ outputs:
 
 about:
   home: https://github.com/opengeos/geoai
-  summary: A Python package for using Artificial Intelligence (AI) with geospatial data
+  summary: A Python package for integrating Artificial Intelligence with geospatial data analysis and visualization
   license: MIT
   license_file: LICENSE
 

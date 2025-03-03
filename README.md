@@ -7,7 +7,7 @@ Home: https://github.com/opengeos/geoai
 
 Package license: MIT
 
-Summary: A Python package for using Artificial Intelligence (AI) with geospatial data
+Summary: A Python package for integrating Artificial Intelligence with geospatial data analysis and visualization
 
 Current build status
 ====================
