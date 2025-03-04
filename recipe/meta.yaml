@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: 281643ca530ad070a2891f6a206a5ddc6f79da133126b6a05a7ab982c5eec887
+  sha256: 37d13283fdc72a1e8fabf4ca0e55694c5a7910d157cfa5eef138278fcf9545e3
 
 build:
   noarch: python
@@ -22,11 +22,13 @@ requirements:
   run:
     - python >={{ python_min }}
     - albumentations
+    - contextily
     - geopandas
     - huggingface_hub
     - jupyter-server-proxy
     - leafmap
     - localtileserver
+    - mapclassify
     - opencv-python-headless
     - overturemaps
     - planetary-computer
