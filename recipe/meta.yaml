@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: 5cfd50f6e7bd756be377eec7d003e6852aa0f0a2b588a2677684a7ee306db4a9
+  sha256: ed442cd4ce532708dfcd0bc1872e40da4b19a51b51bcb045b96a65d922f6defd
 
 build:
   noarch: python
@@ -35,6 +35,7 @@ requirements:
     - pystac-client
     - rasterio
     - rioxarray
+    - scikit-image
     - scikit-learn
     - segment-geospatial
     - pytorch
