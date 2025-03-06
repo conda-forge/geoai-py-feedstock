@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: ed442cd4ce532708dfcd0bc1872e40da4b19a51b51bcb045b96a65d922f6defd
+  sha256: bd5a8da676080660f8d151798b1efa0281cb3b697f758712c6985d00fcbac67e
 
 build:
   noarch: python
