@@ -49,7 +49,7 @@ test:
     - pip check
   requires:
     - pip
-    - libopencv *=headless*  # [linux]
+    - libopencv headless  # [linux]
     - python {{ python_min }}
 
 outputs:
