@@ -39,6 +39,7 @@ requirements:
     - segment-geospatial
     - pytorch
     - torchgeo
+    - torchinfo
     - tqdm
     - transformers
 
