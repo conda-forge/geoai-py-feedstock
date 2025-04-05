@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: 147b9ba01b352e0a6ac63c49ab82472c45611c0c0a9f02865ec53f8bdc8287ba
+  sha256: 7edc3eac56eb7329ad86262424a8da6bccb3ac2f839837b0496139db1c76c32f
 
 build:
   noarch: python
