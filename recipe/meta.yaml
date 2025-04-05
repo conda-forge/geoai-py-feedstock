@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: c23700821e53aa1bdb0a7a19c06b9dddce2667caa035c613110f945bdbe31d1b
+  sha256: 147b9ba01b352e0a6ac63c49ab82472c45611c0c0a9f02865ec53f8bdc8287ba
 
 build:
   noarch: python
@@ -29,6 +29,7 @@ requirements:
     - leafmap
     - localtileserver
     - mapclassify
+    - maplibre
     - overturemaps
     - planetary-computer
     - pystac-client
