@@ -38,6 +38,7 @@ requirements:
     - scikit-image
     - scikit-learn
     - segment-geospatial
+    - shiny >=0.7.0
     - pytorch
     - torchgeo
     - torchinfo
