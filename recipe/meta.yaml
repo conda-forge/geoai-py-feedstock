@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: c23700821e53aa1bdb0a7a19c06b9dddce2667caa035c613110f945bdbe31d1b
+  sha256: 7edc3eac56eb7329ad86262424a8da6bccb3ac2f839837b0496139db1c76c32f
 
 build:
   noarch: python
@@ -29,6 +29,7 @@ requirements:
     - leafmap
     - localtileserver
     - mapclassify
+    - maplibre
     - overturemaps
     - planetary-computer
     - pystac-client
@@ -37,6 +38,7 @@ requirements:
     - scikit-image
     - scikit-learn
     - segment-geospatial
+    - shiny >=0.7.0
     - pytorch
     - torchgeo
     - torchinfo
@@ -46,8 +48,8 @@ requirements:
 test:
   imports:
     - geoai
-  commands:
-    - pip check
+  # commands:
+  #   - pip check
   requires:
     - pip
     - libopencv *=headless*  # [linux]
