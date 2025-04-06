@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -29,7 +29,7 @@ requirements:
     - leafmap
     - localtileserver
     - mapclassify
-    - maplibre
+    - maplibre >=0.3.0
     - overturemaps
     - planetary-computer
     - pystac-client
@@ -38,7 +38,6 @@ requirements:
     - scikit-image
     - scikit-learn
     - segment-geospatial
-    - shiny >=0.7.0
     - pytorch
     - torchgeo
     - torchinfo
@@ -48,8 +47,8 @@ requirements:
 test:
   imports:
     - geoai
-  # commands:
-  #   - pip check
+  commands:
+    - pip check
   requires:
     - pip
     - libopencv *=headless*  # [linux]
