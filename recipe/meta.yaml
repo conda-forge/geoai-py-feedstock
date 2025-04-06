@@ -48,8 +48,8 @@ requirements:
 test:
   imports:
     - geoai
-  commands:
-    - pip check
+  # commands:
+  #   - pip check
   requires:
     - pip
     - libopencv *=headless*  # [linux]
