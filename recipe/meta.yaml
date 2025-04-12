@@ -1,5 +1,6 @@
 {% set name = "geoai-py" %}
 {% set version = "0.5.4" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -22,6 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - albumentations
+    - buildingregulariser
     - contextily
     - geopandas
     - huggingface_hub
