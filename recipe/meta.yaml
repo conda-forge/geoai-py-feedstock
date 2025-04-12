@@ -39,7 +39,7 @@ requirements:
     - rioxarray
     - scikit-image
     - scikit-learn
-    - segment-geospatial
+    # - segment-geospatial
     - pytorch
     - torchgeo
     - torchinfo
