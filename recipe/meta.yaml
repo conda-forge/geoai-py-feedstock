@@ -1,5 +1,6 @@
 {% set name = "geoai-py" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: 6b28bc2d33c08103c9d39ee50140642c17f57307df2e793e85d072fe8ef8d70d
+  sha256: 953e10a1a4b72b79cb471efb26c2931e2002d7f4a7a8ac075472fa1998e121ae
 
 build:
   noarch: python
@@ -22,6 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - albumentations
+    - buildingregulariser
     - contextily
     - geopandas
     - huggingface_hub
@@ -37,7 +39,7 @@ requirements:
     - rioxarray
     - scikit-image
     - scikit-learn
-    - segment-geospatial
+    # - segment-geospatial
     - pytorch
     - torchgeo
     - torchinfo
