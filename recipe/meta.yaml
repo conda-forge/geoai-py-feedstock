@@ -45,6 +45,7 @@ requirements:
     - torchinfo
     - tqdm
     - transformers
+    - packaging <25.0
 
 test:
   imports:
