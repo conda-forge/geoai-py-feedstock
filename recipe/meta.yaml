@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.8.3" %}
+{% set version = "0.9.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: 4581ed6cf6024bd153e235afd42c464c8db5af05a37fac3aa641864d956dc882
+  sha256: 94d1ad59486720c4ebcd2c63db838423fba87caba99ef82edb9cce5004fac600
 
 build:
   noarch: python
@@ -42,6 +42,7 @@ requirements:
     - scikit-learn
     # - segment-geospatial
     - pytorch
+    - torchange
     - torchgeo
     - torchinfo
     - tqdm
