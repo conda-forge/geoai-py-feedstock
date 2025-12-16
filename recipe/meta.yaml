@@ -41,6 +41,7 @@ requirements:
     - scikit-image
     - scikit-learn
     # - segment-geospatial
+    - smoothify
     - pytorch
     - torchange
     - torchgeo
