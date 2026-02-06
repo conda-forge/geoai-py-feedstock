@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.28.0" %}
+{% set version = "0.29.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: baebdd73c22562fae1de196b925e712b5703407f3396e124042300d7c3718885
+  sha256: f45fdc12bb82481d9c803540b73065e1e2f48eb2608e2d1e748d7c46c3395c85
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - albumentations
     - buildingregulariser
     - contextily
+    - datasets
     - geopandas
     - huggingface_hub >=0.15.1,<1.0
     - jupyter-server-proxy
@@ -43,12 +44,12 @@ requirements:
     # - segment-geospatial
     - smoothify
     - pytorch
-    - torchange
+    # - torchange
     - torchgeo
     - torchinfo
     - tqdm
     - transformers
-    - packaging <25.0
+    # - packaging <25.0
 
 test:
   imports:
