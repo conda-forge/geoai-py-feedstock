@@ -47,6 +47,7 @@ requirements:
     - torchinfo
     - tqdm
     - transformers
+    - simsimd
 
 test:
   imports:
