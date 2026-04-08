@@ -58,6 +58,7 @@ test:
     - pip
     - libopencv * =*headless*  # [linux]
     - python {{ python_min }}
+    - simsimd
 
 outputs:
   - name: geoai-py
