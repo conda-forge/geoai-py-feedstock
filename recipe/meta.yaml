@@ -74,7 +74,6 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage("geoai-py", exact=True) }}
-        - simsimd
 
     test:
       requires:
