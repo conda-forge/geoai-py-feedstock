@@ -47,7 +47,7 @@ requirements:
     - torchinfo
     - tqdm
     - transformers
-    - simsimd
+    - albucore >=0.1.0
     
   run_constrained:
     - flask_cors <0a0  # prevent underscore-named package from co-installing
@@ -61,7 +61,7 @@ test:
     - pip
     - libopencv * =*headless*  # [linux]
     - python {{ python_min }}
-    - simsimd
+    - simsimd >=0.1.0
 
 outputs:
   - name: geoai-py
@@ -78,7 +78,7 @@ outputs:
     test:
       requires:
         - python {{ python_min }}
-        - simsimd
+        - simsimd >=0.1.0
 
       imports:
         - geoai
