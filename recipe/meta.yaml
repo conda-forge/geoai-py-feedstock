@@ -61,7 +61,7 @@ test:
     - pip
     - libopencv * =*headless*  # [linux]
     - python {{ python_min }}
-    - simsimd >=0.1.0
+    - albucore >=0.1.0
 
 outputs:
   - name: geoai-py
@@ -78,7 +78,7 @@ outputs:
     test:
       requires:
         - python {{ python_min }}
-        - simsimd >=0.1.0
+        - albucore >=0.1.0
 
       imports:
         - geoai
