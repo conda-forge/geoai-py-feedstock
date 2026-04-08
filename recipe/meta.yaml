@@ -49,8 +49,8 @@ requirements:
     - transformers
     - simsimd
     
-run_constrained:
-  - flask_cors <0a0  # prevent underscore-named package from co-installing
+  run_constrained:
+    - flask_cors <0a0  # prevent underscore-named package from co-installing
 
 test:
   imports:
