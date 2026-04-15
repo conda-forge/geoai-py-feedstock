@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.37.1" %}
+{% set version = "0.37.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: b4df61430bb93ca03aaa5c3a7ae237dfc06040cd3f9eeaf1a52c984e621bc4a4
+  sha256: 8036e1f5986dec976e4aa299743522621fd1bb4c4dbbe2a0a41d18fb0d95ff8a
 
 build:
   noarch: python
@@ -48,7 +48,7 @@ requirements:
     - tqdm
     - transformers
     - albucore >=0.1.0
-    
+
   run_constrained:
     - flask_cors <0a0  # prevent underscore-named package from co-installing
 
