@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.37.2" %}
+{% set version = "0.38.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: 8036e1f5986dec976e4aa299743522621fd1bb4c4dbbe2a0a41d18fb0d95ff8a
+  sha256: c869e29de9120b09457638e5575cfb799ee421b0515f066777825efb7312a3dc
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
     - geopandas
     - huggingface_hub
     - jupyter-server-proxy
-    - leafmap
+    - leafmap >=0.62.0
     - localtileserver
     - mapclassify
     - maplibre >=0.3.0
