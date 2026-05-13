@@ -29,7 +29,7 @@ requirements:
     - geopandas
     - huggingface_hub
     - jupyter-server-proxy
-    - leafmap
+    - leafmap >=0.62.0
     - localtileserver
     - mapclassify
     - maplibre >=0.3.0
