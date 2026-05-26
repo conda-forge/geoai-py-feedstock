@@ -1,6 +1,6 @@
 {% set name = "geoai-py" %}
 {% set version = "0.39.4" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
