@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -43,7 +43,7 @@ requirements:
     - scikit-learn
     - smoothify
     - pytorch
-    - torchgeo
+    - torchgeo >=0.9.0
     - torchinfo
     - tqdm
     - transformers
