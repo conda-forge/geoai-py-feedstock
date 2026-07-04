@@ -1,6 +1,6 @@
 {% set name = "geoai-py" %}
 {% set version = "0.40.1" %}
-{% set python_min = "3.11" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -43,11 +43,13 @@ requirements:
     - scikit-learn
     - smoothify
     - pytorch
-    - torchgeo
+    - torchgeo >=0.9.0
     - torchinfo
     - tqdm
     - transformers
+    - typer
     - albucore >=0.1.0
+    - geolibre
 
   run_constrained:
     - flask_cors <0a0  # prevent underscore-named package from co-installing
