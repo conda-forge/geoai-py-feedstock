@@ -47,6 +47,7 @@ requirements:
     - torchinfo
     - tqdm
     - transformers
+    - typer
     - albucore >=0.1.0
 
   run_constrained:
