@@ -13,10 +13,12 @@ source:
 build:
   noarch: python
   script:
-    # geoai-py 0.44 requires spacy>=3.8.18 (an automated floor bump, not a
-    # real need), but conda-forge only has spacy 3.8.16 so far. Relax it so
-    # `pip check` passes; drop this once spacy>=3.8.18 is on conda-forge.
+    # geoai-py 0.44 requires spacy>=3.8.18 and torch>=2.15.0 (automated
+    # floor bumps, not real needs), but conda-forge only has spacy 3.8.16 and
+    # pytorch 2.14.1 so far. Relax them so `pip check` passes; drop these
+    # once the newer versions are on conda-forge.
     - sed -i.bak "s/spacy>=3.8.18/spacy>=3.8.16/" requirements.txt
+    - sed -i.bak "s/torch>=2.15.0/torch>=2.14.1/" requirements.txt
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -49,7 +51,7 @@ requirements:
     - scikit-learn
     - smoothify
     - spacy >=3.8.16
-    - pytorch >=2.15.0
+    - pytorch >=2.14.1
     - torchgeo >=0.9.0
     - torchinfo
     - tqdm
