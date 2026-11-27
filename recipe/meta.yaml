@@ -1,5 +1,5 @@
 {% set name = "geoai-py" %}
-{% set version = "0.43.1" %}
+{% set version = "0.44.1" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,11 +8,18 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoai_py-{{ version }}.tar.gz
-  sha256: 22ac558a6e12baabb61b6e1b70da57a1f3432702aa80f68976fe4f35cec0cfc1
+  sha256: 881d3b9e48c6349ee7259a7be44b58adef5e36dbe9ebb410b0c1eda106dadc91
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    # geoai-py 0.44 requires spacy>=3.8.18 and torch>=2.15.0 (automated
+    # floor bumps, not real needs), but conda-forge only has spacy 3.8.16 and
+    # pytorch 2.14.1 so far. Relax them so `pip check` passes; drop these
+    # once the newer versions are on conda-forge.
+    - sed -i.bak "s/spacy>=3.8.18/spacy>=3.8.16/" requirements.txt
+    - sed -i.bak "s/torch>=2.15.0/torch>=2.14.1/" requirements.txt
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -25,11 +32,12 @@ requirements:
     - albumentations
     - buildingregulariser
     - contextily
-    - datasets
+    - datasets >=5.2.0
+    - einops >=0.8.2
     - geopandas
     - huggingface_hub
     - jupyter-server-proxy
-    - leafmap >=0.62.0
+    - leafmap >=0.64.7
     - localtileserver
     - mapclassify
     - maplibre >=0.3.0
@@ -42,11 +50,12 @@ requirements:
     - scikit-image
     - scikit-learn
     - smoothify
-    - pytorch
+    - spacy >=3.8.16
+    - pytorch >=2.14.1
     - torchgeo >=0.9.0
     - torchinfo
     - tqdm
-    - transformers
+    - transformers >=5.23.0
     - typer
     - albucore >=0.1.0
     - geolibre
